@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A315i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen Background" translatesAutoresizingMaskIntoConstraints="NO" id="jxc-sC-gNZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen Title" translatesAutoresizingMaskIntoConstraints="NO" id="xP4-s9-yVE">
+                                <rect key="frame" x="16" y="28" width="343" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xP4-s9-yVE" secondAttribute="height" multiplier="49:13" id="gfh-VO-Asc"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="sk0-It-SvA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Anant Jain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-J2-M95">
+                                <rect key="frame" x="20" y="622.5" width="335" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-at-fSj">
+                                <rect key="frame" x="172.5" y="507.5" width="30" height="114.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Sv9-JV-NuB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-E7-rhR">
+                                <rect key="frame" x="172.5" y="119" width="30" height="114.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="gS2-NU-qUc"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="wqV-iy-bag">
+                                <rect key="frame" x="48" y="233.5" width="279" height="274"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="MDI-zy-2Hd">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="431"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="279" id="Q1i-Ab-NeW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="439"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jxc-sC-gNZ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2GG-DL-5XR"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qlv-J2-M95" secondAttribute="bottom" constant="20" id="4cv-w0-1U9"/>
+                            <constraint firstItem="vQV-E7-rhR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5hU-g0-pPT"/>
+                            <constraint firstAttribute="trailing" secondItem="xP4-s9-yVE" secondAttribute="trailing" priority="948" constant="16" id="8Ng-1t-cOU"/>
+                            <constraint firstItem="5t4-at-fSj" firstAttribute="height" secondItem="vQV-E7-rhR" secondAttribute="height" id="9pR-HV-iFH"/>
+                            <constraint firstItem="qlv-J2-M95" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B5u-C1-snV"/>
+                            <constraint firstItem="wqV-iy-bag" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IpD-ut-aXL"/>
+                            <constraint firstAttribute="trailing" secondItem="qlv-J2-M95" secondAttribute="trailing" constant="20" id="JVb-vt-TQh"/>
+                            <constraint firstItem="jxc-sC-gNZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MJV-xT-y7S"/>
+                            <constraint firstItem="xP4-s9-yVE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="VNW-Oh-Kr3"/>
+                            <constraint firstItem="xP4-s9-yVE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" priority="950" constant="16" id="WX6-Ju-o06"/>
+                            <constraint firstItem="qlv-J2-M95" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="a7B-iS-Lby"/>
+                            <constraint firstAttribute="trailing" secondItem="jxc-sC-gNZ" secondAttribute="trailing" id="h1B-GK-o5z"/>
+                            <constraint firstItem="xP4-s9-yVE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kkF-xj-zI9"/>
+                            <constraint firstItem="5t4-at-fSj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="o6a-jL-2ff"/>
+                            <constraint firstItem="vQV-E7-rhR" firstAttribute="top" secondItem="xP4-s9-yVE" secondAttribute="bottom" id="sTF-5I-KUS"/>
+                            <constraint firstItem="qlv-J2-M95" firstAttribute="top" secondItem="5t4-at-fSj" secondAttribute="bottom" id="tFp-eR-MvD"/>
+                            <constraint firstItem="5t4-at-fSj" firstAttribute="top" secondItem="wqV-iy-bag" secondAttribute="bottom" id="tPg-G2-Pub"/>
+                            <constraint firstItem="wqV-iy-bag" firstAttribute="top" secondItem="vQV-E7-rhR" secondAttribute="bottom" id="wxq-4u-gzM"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jxc-sC-gNZ" secondAttribute="bottom" id="x8q-D1-a4l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.414985590778095" y="371.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchScreen Background" width="4" height="818"/>
+        <image name="LaunchScreen Title" width="611" height="165"/>
+        <image name="LaunchScreen Triangle" width="512" height="512"/>
+    </resources>
+</document>
