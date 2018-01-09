@@ -50,7 +50,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
         
         // Updates the width of the segmented control
         let frame = difficultySegmentedControl.frame
-        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: self.view.frame.width - 82, height: frame.height)
+        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: self.view.frame.width - 85, height: frame.height)
         
         // Prompts for player names, in case this is Player vs. Player mode
         if gameMode == Constants.GameModes.PvP {
@@ -64,7 +64,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
             })
             player1NamePrompt.addAction(UIAlertAction(title: "Done", style: .default, handler: { (action) in
                 if let player1NameTextFieldText = player1NamePrompt.textFields?[0].text {
-                    if player1NameTextFieldText.characters.count > 0 {
+                    if player1NameTextFieldText.count > 0 {
                         self.player1Name = player1NameTextFieldText
                     }
                 }
@@ -76,7 +76,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
             }))
             player2NamePrompt.addAction(UIAlertAction(title: "Done", style: .default, handler: { (action) in
                 if let player2NameTextFieldText = player2NamePrompt.textFields?[0].text {
-                    if player2NameTextFieldText.characters.count > 0 {
+                    if player2NameTextFieldText.count > 0 {
                         self.player2Name = player2NameTextFieldText
                     }
                 }
@@ -161,7 +161,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
         }
     }
     
-    func promptPlayer1() {
+    @objc func promptPlayer1() {
         updateStatus(message: "Pick a weapon, \(player1Name)!")
     }
     
@@ -399,7 +399,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         // Updates the width of the segmented control
         let frame = difficultySegmentedControl.frame
-        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: size.width - 82, height: frame.height)
+        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: size.width - 85, height: frame.height)
     }
     
     // MARK: - Navigation

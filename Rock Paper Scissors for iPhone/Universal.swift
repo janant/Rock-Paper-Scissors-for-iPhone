@@ -84,7 +84,7 @@ class Universal: NSObject {
         }
     }
     
-    static func playClickSound() {
+    @objc static func playClickSound() {
         if clicksSoundsOn {
             clickSound.play()
         }

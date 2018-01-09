@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct Constants {
     
@@ -40,6 +41,10 @@ struct Constants {
         static let ScissorsCutPaper = "Scissors cut Paper!"
         static let RockSmashesScissors = "Rock smashes Scissors!"
         static let NothingHappens = "Nothing happens!"
+    }
+    
+    struct UIFrames {
+        static let MenuVisibleHeight: CGFloat = 165
     }
     
 }

@@ -14,9 +14,17 @@ class SlideUpPresentation: UIPresentationController {
     
     override var frameOfPresentedViewInContainerView: CGRect {
         let presentingFrame = presentingViewController.view.frame
-        let visibleHeight: CGFloat = 165
+        let springPadding: CGFloat = 40 // Slide up animation is springy, adds extra padding
         
-        return CGRect(x: 0, y: presentingFrame.height - visibleHeight, width: presentingFrame.width, height: visibleHeight + 40)
+        var visibleHeight = Constants.UIFrames.MenuVisibleHeight
+        if #available(iOS 11, *) { // Adds safe area inset amount of height to menu
+            visibleHeight += presentingViewController.view.safeAreaInsets.bottom
+        }
+        
+        return CGRect(x: 0,
+                      y: presentingFrame.height - visibleHeight,
+                      width: presentingFrame.width,
+                      height: visibleHeight + springPadding)
     }
     
     override func presentationTransitionWillBegin() {

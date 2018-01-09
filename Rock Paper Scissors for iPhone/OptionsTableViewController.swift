@@ -90,10 +90,10 @@ class OptionsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if section == 1 {
-            return "Player vs. Computer mode will end after one side reaches \(Int(pvcScoreStepper.value)) ponts."
+            return "Player vs. Computer mode will end after one side reaches \(Int(pvcScoreStepper.value)) points."
         }
         else if section == 2 {
-            return "Player vs. Player mode will end after one side reaches \(Int(pvpScoreStepper.value)) ponts."
+            return "Player vs. Player mode will end after one side reaches \(Int(pvpScoreStepper.value)) points."
         }
         else {
             return nil
@@ -129,7 +129,7 @@ class OptionsTableViewController: UITableViewController {
     
     // Stepper callback
     
-    func updateTable() {
+    @objc func updateTable() {
         Universal.playClickSound()
         tableView.reloadData()
     }
