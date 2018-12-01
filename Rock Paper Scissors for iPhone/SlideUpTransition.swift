@@ -40,10 +40,10 @@ class SlideUpTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         // Translation adjustment
         var adjustment: CGFloat = toVC.menuToolbar.frame.height // Toolbar height
-        if #available(iOS 11, *) { // Safe area
+        if #available(iOS 11, *) {
             adjustment += fromVC.view.safeAreaInsets.bottom
         }
-        
+
         // Sets up frame for toVC
         toVC.view.frame = transitionContext.finalFrame(for: toVC)
         toVC.view.transform = CGAffineTransform(translationX: 0, y: Constants.UIFrames.MenuVisibleHeight - adjustment)
@@ -57,19 +57,13 @@ class SlideUpTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func dismissAnimation(using transitionContext: UIViewControllerContextTransitioning) {
-        guard
-            let fromVC = transitionContext.viewController(forKey: .from) as? MenuViewController,
-            let toVC = transitionContext.viewController(forKey: .to)
-        else {
+        guard let fromVC = transitionContext.viewController(forKey: .from) as? MenuViewController else {
             transitionContext.completeTransition(false)
             return
         }
         
         // Translation adjustment
-        var adjustment: CGFloat = fromVC.menuToolbar.frame.height // Toolbar height
-        if #available(iOS 11, *) { // Safe area
-            adjustment += toVC.view.safeAreaInsets.bottom
-        }
+        let adjustment: CGFloat = fromVC.menuToolbar.frame.height // Toolbar height
         
         // Slides back down
         UIView.animate(withDuration: self.transitionDuration(using: transitionContext), delay: 0, options: .curveEaseIn, animations: { 

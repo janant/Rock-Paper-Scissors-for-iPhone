@@ -45,6 +45,7 @@ struct Constants {
     
     struct UIFrames {
         static let MenuVisibleHeight: CGFloat = 165
+        static let DifficultyControlSpacing: CGFloat = 93
     }
     
 }

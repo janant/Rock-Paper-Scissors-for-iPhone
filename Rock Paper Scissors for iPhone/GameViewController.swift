@@ -26,6 +26,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
     @IBOutlet weak var scissorsButton: UIButton!
     
     // Toolbar
+    @IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var difficultySegmentedControl: UISegmentedControl!
     
     var gameMode: String!
@@ -50,7 +51,7 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
         
         // Updates the width of the segmented control
         let frame = difficultySegmentedControl.frame
-        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: self.view.frame.width - 85, height: frame.height)
+        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: self.view.frame.width - Constants.UIFrames.DifficultyControlSpacing, height: frame.height)
         
         // Prompts for player names, in case this is Player vs. Player mode
         if gameMode == Constants.GameModes.PvP {
@@ -399,7 +400,8 @@ class GameViewController: UIViewController, MenuViewControllerDelegate, UIViewCo
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         // Updates the width of the segmented control
         let frame = difficultySegmentedControl.frame
-        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: size.width - 85, height: frame.height)
+        print(self.view.layoutMargins)
+        difficultySegmentedControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: size.width - Constants.UIFrames.DifficultyControlSpacing, height: frame.height)
     }
     
     // MARK: - Navigation

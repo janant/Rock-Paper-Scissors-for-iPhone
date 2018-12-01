@@ -36,7 +36,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Updates the width of the segmented control
         let frame = difficultyControl.frame
-        difficultyControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: self.view.frame.width - 85, height: frame.height)
+        difficultyControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: self.view.frame.width - Constants.UIFrames.DifficultyControlSpacing, height: frame.height)
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,7 +90,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         // Updates the width of the segmented control
         let frame = difficultyControl.frame
-        difficultyControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: size.width - 85, height: frame.height)
+        difficultyControl.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: size.width - Constants.UIFrames.DifficultyControlSpacing, height: frame.height)
     }
 
 }
